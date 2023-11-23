@@ -1,4 +1,4 @@
-name: ToolReplacer Release
+name: ToolReplacer Check Pull-Request
 on:
   pull_request:
     types:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  release_mod:
+  check_pullrequest:
     runs-on: ["ubuntu-latest"]
     steps:
       - name: "Pull repository"
