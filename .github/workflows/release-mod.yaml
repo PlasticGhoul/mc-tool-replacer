@@ -23,6 +23,10 @@ jobs:
       - name: "Setup gradle"
         uses: gradle/gradle-build-action@v2
 
+      - name: "Prepare build"
+        run: |
+          chmod +x gradlew
+
       - name: "Execute gradle build"
         run: |
           ./gradlew -Pmod_version="${RELEASE_VERSION}" build
