@@ -4,7 +4,6 @@ on:
     inputs:
       RELEASE_VERSION:
         type: string
-        default: "x.x.x"
         description: "Version to release the mod."
         required: true
 
@@ -12,12 +11,6 @@ jobs:
   release_mod:
     runs-on: ["ubuntu-latest"]
     steps:
-      - name: "Check parameters"
-        run: |
-          [[ "${RELEASE_VERSION}" = "x.x.x" ]] && exit 1
-        env:
-          RELEASE_VERSION: "${{ github.event.inputs.RELEASE_VERSION }}"
-
       - name: "Pull repository"
         uses: actions/checkout@v4
 
