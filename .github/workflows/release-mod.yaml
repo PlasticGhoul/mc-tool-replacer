@@ -42,7 +42,7 @@ jobs:
       - name: "Create release and publish artifact"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ github.token }}"
+          repo_token: "${{ secrets.ACCESS_TOKEN }}"
           automatic_release_tag: "${{ github.event.inputs.RELEASE_VERSION }}"
           prerelease: true
           title: "Release ${{ github.event.inputs.RELEASE_VERSION }}"
