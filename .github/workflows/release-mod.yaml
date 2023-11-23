@@ -33,12 +33,6 @@ jobs:
         env:
           RELEASE_VERSION: "${{ github.event.inputs.RELEASE_VERSION }}"
 
-      #- name: "Publish artifact"
-      #  run: |
-      #    ./gradlew -Pmod_version="${RELEASE_VERSION}" publish
-      #  env:
-      #    RELEASE_VERSION: "${{ github.event.inputs.RELEASE_VERSION }}"
-
       - name: "Create release and publish artifact"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:

@@ -47,9 +47,7 @@ public class ToolReaplacer
 
 			if (sameMatTool != null && sameMatTool.size() > 0) {
 				newTool = sameMatTool.get(0);
-			} //else {
-			//	newTool = sameTools.get(0);
-			//}
+			}
 
 			if (newTool != null) {
 				LOGGER.info("Found another tool in players inventory: " + newTool.getDisplayName().toString());
