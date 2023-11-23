@@ -25,7 +25,6 @@ jobs:
 
       - name: "Execute gradle build"
         run: |
-          ls -lisah
           ./gradlew -Pmod_version="${RELEASE_VERSION}" build
         env:
           RELEASE_VERSION: "${{ github.event.inputs.RELEASE_VERSION }}"
